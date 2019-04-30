@@ -42,7 +42,7 @@ namespace VRTK
 
         protected virtual void OnDisable()
         {
-            RemoveCanvas();
+            //RemoveCanvas();
         }
 
         protected virtual void OnDestroy()

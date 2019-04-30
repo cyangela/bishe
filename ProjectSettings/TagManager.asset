@@ -9,6 +9,11 @@ TagManager:
   - ExcludeTeleport
   - TeleportIgnore
   - InteractionObject
+  - Canvas
+  - LeftController_UI
+  - RightController_UI
+  - LeftController
+  - RightController
   layers:
   - Default
   - TransparentFX
