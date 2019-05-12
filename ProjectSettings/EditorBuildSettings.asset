@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 94c33da1787e8a748b91e5ee97a0f984
+  - enabled: 1
+    path: Assets/Scenes/Microscope.unity
+    guid: 3ab4c4dea0c906844a8c202ef084fb98
+  - enabled: 1
+    path: Assets/Scenes/2019.unity
+    guid: 2fb1379fe99da194c97e7fee500b5221
