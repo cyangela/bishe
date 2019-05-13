@@ -13,7 +13,13 @@ public class GameManager : MonoBehaviour
     }
 
     private int current_Part = 0;
-    public GameObject[] telePortPoints;
+    private GameObject[] telePortPoints;
+
+    [HideInInspector]
+    public bool isCanToMicroscope;
+
+    [HideInInspector]
+    public bool isCanTo2019;
 
     private void Start()
     {
@@ -26,7 +32,8 @@ public class GameManager : MonoBehaviour
     /// <param name="flag"></param>
     public void SetTelePortPoints(bool flag)
     {
-        Debug.Log(current_Part);
+        telePortPoints = new GameObject[2];
+        telePortPoints[0] = GameObject.Find("TelePortPoints").transform.Find("TelePortPoints_1").gameObject;
         telePortPoints[current_Part].SetActive(flag);
     }
 }

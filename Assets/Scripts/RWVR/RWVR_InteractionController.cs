@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RWVR_InteractionController : MonoBehaviour {
     public Transform snapColliderOrigin;
@@ -70,6 +71,24 @@ public class RWVR_InteractionController : MonoBehaviour {
             {
                 objectBeingInteractedWith.OnTriggerWasReleased(this);
                 objectBeingInteractedWith = null;
+            }
+        }
+
+        if (GameManager._Instance.isCanToMicroscope)
+        {
+            if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
+            {
+                GameManager._Instance.isCanToMicroscope = false;
+                SceneManager.LoadScene("Microscope");
+            }
+        }
+
+        if (GameManager._Instance.isCanTo2019)
+        {
+            if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
+            {
+                GameManager._Instance.isCanTo2019 = false;
+                SceneManager.LoadScene("2019");
             }
         }
     }

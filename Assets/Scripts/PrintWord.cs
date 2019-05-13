@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PrintWord : MonoBehaviour
 { 
     public string[] str;
-    public float time = 0.01f;
+    public float time = 0.05f;
     public int warp;
     private Button button;
     private Text text;
