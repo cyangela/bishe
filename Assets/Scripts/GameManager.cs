@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 场景ID
+/// </summary>
+public enum ScenceID
+{
+    Start,
+    Mian,
+    Microscope,
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager _Instance;
@@ -13,18 +23,16 @@ public class GameManager : MonoBehaviour
     }
 
     private int current_Part = 0;
-    private GameObject[] telePortPoints;
+    private GameObject[] telePortPoints;//实验室路标
 
     [HideInInspector]
-    public bool isCanToMicroscope;
+    public bool isCanToMicroscope;//到显微镜场景
 
     [HideInInspector]
-    public bool isCanTo2019;
+    public bool isCanTo2019;//到实验室场景
 
-    private void Start()
-    {
-
-    }
+    [HideInInspector]
+    public ScenceID currentScenceID = 0;//当前场景ID
 
     /// <summary>
     /// 设置引导路标的可见性
@@ -32,8 +40,11 @@ public class GameManager : MonoBehaviour
     /// <param name="flag"></param>
     public void SetTelePortPoints(bool flag)
     {
-        telePortPoints = new GameObject[2];
-        telePortPoints[0] = GameObject.Find("TelePortPoints").transform.Find("TelePortPoints_1").gameObject;
-        telePortPoints[current_Part].SetActive(flag);
+        if (currentScenceID == ScenceID.Mian)
+        {
+            telePortPoints = new GameObject[2];
+            telePortPoints[0] = GameObject.Find("TelePortPoints").transform.Find("TelePortPoints_1").gameObject;
+            telePortPoints[current_Part].SetActive(flag);
+        }
     }
 }

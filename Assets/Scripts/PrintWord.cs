@@ -11,7 +11,7 @@ public class PrintWord : MonoBehaviour
     public int warp;
     private Button button;
     private Text text;
-    private StringBuilder sb = new StringBuilder("\u3000\u3000");
+    private StringBuilder sb = new StringBuilder();
     private int count = 0;
     private int index = 0;
         
@@ -36,38 +36,45 @@ public class PrintWord : MonoBehaviour
     /// <returns></returns>
     IEnumerator Words(float time, int wrap)
     {
+        if (wrap == 0)
+            sb = new StringBuilder();
+        else
+            sb = new StringBuilder("\u3000\u3000");
+
         for (int i = 0; i < str[index].Length; i++)
         {
             if (sb.Length <= str[index].Length + count)
             {
                 sb.Append(str[index][i]);
-                if ((sb.Length - count) % wrap == 0)
+                if (wrap != 0)
                 {
-                    sb.Append("\r\n");
-                    count += 2;
+                    if ((sb.Length - count) % wrap == 0)
+                    {
+                        sb.Append("\r\n");
+                        count += 2;
+                    }
                 }
                 yield return new WaitForSeconds(time);
             }
         }
         sb.Append("。");
-        if (str.Length != index + 1)
-        {
-            yield return new WaitForSeconds(1);
-            button.gameObject.SetActive(true);
-        }
-        else
+        yield return new WaitForSeconds(1);
+        button.gameObject.SetActive(true);
+        if (str.Length == index + 1)
         {
             GameManager._Instance.SetTelePortPoints(true);
         }
     }
 
     private void Onclick()
-    {
-        sb = new StringBuilder("\u3000\u3000");
+    {        
         count = 0;
         index++;
+        if (index == str.Length)
+        {
+            return;
+        }
         StartCoroutine(Words(time, warp));
-        button.gameObject.SetActive(false);
     }
 
 }

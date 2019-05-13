@@ -79,6 +79,7 @@ public class RWVR_InteractionController : MonoBehaviour {
             if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
             {
                 GameManager._Instance.isCanToMicroscope = false;
+                GameManager._Instance.currentScenceID = ScenceID.Microscope;
                 SceneManager.LoadScene("Microscope");
             }
         }
@@ -88,6 +89,7 @@ public class RWVR_InteractionController : MonoBehaviour {
             if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
             {
                 GameManager._Instance.isCanTo2019 = false;
+                GameManager._Instance.currentScenceID = ScenceID.Mian;
                 SceneManager.LoadScene("2019");
             }
         }
