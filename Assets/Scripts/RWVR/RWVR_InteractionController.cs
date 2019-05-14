@@ -74,6 +74,7 @@ public class RWVR_InteractionController : MonoBehaviour {
             }
         }
 
+		//跳转显微镜场景
         if (GameManager._Instance.isCanToMicroscope)
         {
             if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
@@ -84,6 +85,7 @@ public class RWVR_InteractionController : MonoBehaviour {
             }
         }
 
+		//跳转实验室场景
         if (GameManager._Instance.isCanTo2019)
         {
             if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
@@ -93,6 +95,12 @@ public class RWVR_InteractionController : MonoBehaviour {
                 SceneManager.LoadScene("2019");
             }
         }
+
+		if (GameManager._Instance.isMicroscope)
+		{
+			GameManager._Instance.isMicroscope = false;
+			Microscope_Manager._Instance.Play();
+		}
     }
 
     private void UpdateVelocity()

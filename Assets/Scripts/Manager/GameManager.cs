@@ -31,7 +31,10 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool isCanTo2019;//到实验室场景
 
-    [HideInInspector]
+	[HideInInspector]
+	public bool isMicroscope;//是否进行显微镜操作
+
+	[HideInInspector]
     public ScenceID currentScenceID = 0;//当前场景ID
 
     /// <summary>

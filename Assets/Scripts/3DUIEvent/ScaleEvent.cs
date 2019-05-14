@@ -13,18 +13,17 @@ public class ScaleEvent : _3DUIEventBase
         SetScale(e.target, 1.06f);
     }
 
-    protected override void DestinationMarkerHover(object sender, DestinationMarkerEventArgs e)
-    {
-        if (e.target.tag == "InteractionObject")
-        {
-            GameManager._Instance.isCanTo2019 = true;
-        }
-    }
+    //protected override void DestinationMarkerHover(object sender, DestinationMarkerEventArgs e)
+    //{
+    //    if (e.target.tag == "InteractionObject")
+    //    {
+    //        GameManager._Instance.isCanTo2019 = true;
+    //    }
+    //}
 
     protected override void DestinationMarkerExit(object sender, DestinationMarkerEventArgs e)
     {
         ReSetScale(e.target);
-        GameManager._Instance.isCanTo2019 = true;
     }
 
     protected override void DestinationMarkerSet(object sender, DestinationMarkerEventArgs e)
@@ -38,8 +37,9 @@ public class ScaleEvent : _3DUIEventBase
         {
             vector3 = target.localPosition;
             target.Translate(0, 0, -scale);
-            //target.localScale = new Vector3(target.localScale.x * scale, target.localScale.y * scale, target.localScale.z);
-        }
+			GameManager._Instance.isCanTo2019 = true;
+			//target.localScale = new Vector3(target.localScale.x * scale, target.localScale.y * scale, target.localScale.z);
+		}
         
     }
 
@@ -49,6 +49,7 @@ public class ScaleEvent : _3DUIEventBase
         {
             //target.localScale = Vector3.one;
             target.localPosition = vector3;
-        }      
+			GameManager._Instance.isCanTo2019 = false;
+		}      
     }
 }
