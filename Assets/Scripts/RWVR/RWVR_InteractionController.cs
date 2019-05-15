@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class RWVR_InteractionController : MonoBehaviour {
     public Transform snapColliderOrigin;
@@ -98,8 +99,11 @@ public class RWVR_InteractionController : MonoBehaviour {
 
 		if (GameManager._Instance.isMicroscope)
 		{
-			GameManager._Instance.isMicroscope = false;
-			Microscope_Manager._Instance.Play();
+            if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
+            {
+			    GameManager._Instance.isMicroscope = false;
+			    Microscope_Manager._Instance.Play();
+            }
 		}
     }
 

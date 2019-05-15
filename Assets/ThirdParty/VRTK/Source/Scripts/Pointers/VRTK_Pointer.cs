@@ -23,6 +23,12 @@ namespace VRTK
     [AddComponentMenu("VRTK/Scripts/Pointers/VRTK_Pointer")]
     public class VRTK_Pointer : VRTK_DestinationMarker
     {
+
+        public void SetActveEnable(bool flag)
+        {
+            enableTeleport = flag;
+        }
+
         [Header("Pointer Activation Settings")]
 
         [Tooltip("The specific renderer to use when the pointer is activated. The renderer also determines how the pointer reaches it's destination (e.g. straight line, bezier curve).")]
@@ -33,6 +39,7 @@ namespace VRTK
         public bool holdButtonToActivate = true;
         [Tooltip("If this is checked then the pointer will be toggled on when the script is enabled.")]
         public bool activateOnEnable = false;
+
         [Tooltip("The time in seconds to delay the pointer being able to be active again.")]
         public float activationDelay = 0f;
 
@@ -42,6 +49,7 @@ namespace VRTK
         public VRTK_ControllerEvents.ButtonAlias selectionButton = VRTK_ControllerEvents.ButtonAlias.TouchpadPress;
         [Tooltip("If this is checked then the pointer selection action is executed when the Selection Button is pressed down. If this is unchecked then the selection action is executed when the Selection Button is released.")]
         public bool selectOnPress = false;
+
         [Tooltip("The time in seconds to delay the pointer being able to execute the select action again.")]
         public float selectionDelay = 0f;
         [Tooltip("The amount of time the pointer can be over the same collider before it automatically attempts to select it. 0f means no selection attempt will be made.")]
@@ -161,6 +169,7 @@ namespace VRTK
                 PointerStateInvalid(this, GetStateEventPayload());
             }
         }
+
 
         /// <summary>
         /// The IsActivationButtonPressed method returns whether the configured activation button is being pressed.

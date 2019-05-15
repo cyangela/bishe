@@ -60,20 +60,17 @@ public class PrintWord : MonoBehaviour
         sb.Append("。");
         yield return new WaitForSeconds(1);
         button.gameObject.SetActive(true);
-        if (str.Length == index + 1)
-        {
-            GameManager._Instance.SetTelePortPoints(true);
-        }
     }
 
     private void Onclick()
-    {        
+    {
         count = 0;
-        index++;
-        if (index == str.Length)
+        if (index + 1 == str.Length)
         {
+            GameManager._Instance.SetTelePortPoints(true);
             return;
         }
+        index++;
         StartCoroutine(Words(time, warp));
     }
 

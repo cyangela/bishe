@@ -67,7 +67,6 @@ public class ToPlayVideo : MonoBehaviour
         {
             if ((ulong)videoPlayer.frame == videoPlayer.frameCount)
             {
-                Debug.Log(000);
                 videoPlayer.Stop();
                 next_Button.gameObject.SetActive(true);
             }

@@ -41,7 +41,8 @@ public class OutLine : _3DUIEventBase
     private void ToggleHighlight(Transform target, Color color, bool flag)
     {
         VRTK_BaseHighlighter highligher = (target != null ? target.GetComponentInChildren<VRTK_BaseHighlighter>() : null);
-        if (highligher != null)
+        //VRTK_BaseHighlighter highligher = target.GetComponentInChildren<VRTK_BaseHighlighter>();
+        if (highligher != null && highligher.enabled)
         {
 			if (target.tag == "InteractionObject")
 			{

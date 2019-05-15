@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using VRTK.Highlighters;
 
 public class Microscope_Manager : MonoBehaviour
 {
     public static Microscope_Manager _Instance;
-
     private PlayableDirector playableDirector;
-
 	private int index = 0;
 
-	public GameObject[] gameObject;
+    public GameObject canvas;
+	public GameObject[] go;
+    public string[] str;
+    public Text text;
 
     private void Awake()
     {
@@ -24,10 +27,17 @@ public class Microscope_Manager : MonoBehaviour
         playableDirector = GetComponent<PlayableDirector>();
     }
 
+    /// <summary>
+    /// 动画暂停
+    /// </summary>
     public void Stop()
     {
-        playableDirector.Stop();
+        playableDirector.Pause();
     }
+
+    /// <summary>
+    /// 动画开始
+    /// </summary>
     public void Play()
     {
         playableDirector.Play();
@@ -38,8 +48,24 @@ public class Microscope_Manager : MonoBehaviour
 	/// </summary>
 	public void SetNextGO()
 	{
-		index++;
-		gameObject[index - 1].GetComponent<VRTK_OutlineObjectCopyHighlighter>().enabled = false;
-		gameObject[index].GetComponent<VRTK_OutlineObjectCopyHighlighter>().enabled = true;
+        if (index < go.Length)
+        {
+            if (index == go.Length - 1)
+            {
+                canvas.SetActive(true);
+            }
+            index++;
+            text.text = str[index - 1];
+            go[index - 1].GetComponent<VRTK_OutlineObjectCopyHighlighter>().enabled = false;
+            if (index != go.Length)
+            {
+                go[index].GetComponent<VRTK_OutlineObjectCopyHighlighter>().enabled = true;
+            }         
+        }
 	}
+    public void GoToMain()
+    {
+        GameManager._Instance.currentScenceID = ScenceID.Mian;
+        SceneManager.LoadScene("2019");
+    }
 }

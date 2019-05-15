@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 using VRTK;
 
 
@@ -28,28 +29,46 @@ public class ScaleEvent : _3DUIEventBase
 
     protected override void DestinationMarkerSet(object sender, DestinationMarkerEventArgs e)
     {
-        Debug.Log(e.target.name);
+        if (e.target.name == "Video")
+        {
+            VideoPlayer videoPlayer = e.target.GetComponent<VideoPlayer>();
+            if (videoPlayer.isPlaying)
+            {
+                videoPlayer.Pause();
+            }
+            else
+            {
+                videoPlayer.Play();
+            }
+        }
+        else
+        {
+
+        }
     }
 
     private void SetScale(Transform target, float scale)
     {
-        if (LayerMask.LayerToName(target.gameObject.layer) == "Start_3D_UI")
+        if (target.tag == "Start_3D_UI")
         {
             vector3 = target.localPosition;
             target.Translate(0, 0, -scale);
-			GameManager._Instance.isCanTo2019 = true;
-			//target.localScale = new Vector3(target.localScale.x * scale, target.localScale.y * scale, target.localScale.z);
-		}
+            if (target.name != "Video")
+            {
+                GameManager._Instance.isCanTo2019 = true;
+            }
+            //target.localScale = new Vector3(target.localScale.x * scale, target.localScale.y * scale, target.localScale.z);
+        }
         
     }
 
     private void ReSetScale(Transform target)
     {
-        if (LayerMask.LayerToName(target.gameObject.layer) == "Start_3D_UI")
+        if (target.tag == "Start_3D_UI")
         {
-            //target.localScale = Vector3.one;
             target.localPosition = vector3;
-			GameManager._Instance.isCanTo2019 = false;
-		}      
+            GameManager._Instance.isCanTo2019 = false;
+            //target.localScale = Vector3.one;
+        }      
     }
 }
