@@ -65,7 +65,7 @@ public class Microscope_Manager : MonoBehaviour
 	}
     public void GoToMain()
     {
-        GameManager._Instance.currentScenceID = ScenceID.Mian;
+        GameManager._Instance.currentScenceID = ScenceID.Cell;
         SceneManager.LoadScene("2019");
     }
 }

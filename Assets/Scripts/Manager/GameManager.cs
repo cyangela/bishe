@@ -10,6 +10,7 @@ public enum ScenceID
     Start,
     Mian,
     Microscope,
+    Cell
 }
 
 public class GameManager : MonoBehaviour
@@ -43,11 +44,13 @@ public class GameManager : MonoBehaviour
     /// <param name="flag"></param>
     public void SetTelePortPoints(bool flag)
     {
-        if (currentScenceID == ScenceID.Mian)
+        if (currentScenceID == ScenceID.Mian || currentScenceID == ScenceID.Cell)
         {
             telePortPoints = new GameObject[2];
             telePortPoints[0] = GameObject.Find("TelePortPoints").transform.Find("TelePortPoints_1").gameObject;
+            telePortPoints[1] = GameObject.Find("TelePortPoints").transform.Find("TelePortPoints_2").gameObject;
             telePortPoints[current_Part].SetActive(flag);
+            current_Part++;
         }
     }
 }

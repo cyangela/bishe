@@ -80,9 +80,13 @@ public class RWVR_InteractionController : MonoBehaviour {
         {
             if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
             {
-                GameManager._Instance.isCanToMicroscope = false;
-                GameManager._Instance.currentScenceID = ScenceID.Microscope;
-                SceneManager.LoadScene("Microscope");
+                MyTween myTween = new MyTween();
+                myTween.OnHalfComplete(()=>{
+                    GameManager._Instance.isCanToMicroscope = false;
+                    GameManager._Instance.currentScenceID = ScenceID.Microscope;
+                    SceneManager.LoadScene("Microscope");
+                });
+                ScreenFade.Instance.SceneFade(myTween);
             }
         }
 
@@ -91,9 +95,13 @@ public class RWVR_InteractionController : MonoBehaviour {
         {
             if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Axis0))
             {
-                GameManager._Instance.isCanTo2019 = false;
-                GameManager._Instance.currentScenceID = ScenceID.Mian;
-                SceneManager.LoadScene("2019");
+                MyTween myTween = new MyTween();
+                myTween.OnHalfComplete(() => {
+                    GameManager._Instance.isCanTo2019 = false;
+                    GameManager._Instance.currentScenceID = ScenceID.Mian;
+                    SceneManager.LoadScene("2019");
+                });
+                ScreenFade.Instance.SceneFade(myTween);
             }
         }
 

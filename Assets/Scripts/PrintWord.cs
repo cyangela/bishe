@@ -73,5 +73,5 @@ public class PrintWord : MonoBehaviour
         index++;
         StartCoroutine(Words(time, warp));
     }
-
+    
 }

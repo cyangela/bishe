@@ -17,6 +17,7 @@ TagManager:
   - Microscope
   - Video
   - Start_3D_UI
+  - Controller
   layers:
   - Default
   - TransparentFX
