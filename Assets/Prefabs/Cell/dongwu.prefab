@@ -956,7 +956,7 @@ MonoBehaviour:
   isSelfRotate: 0
   isSelfRotatePositive: 0
   speed: 0
-  rotateDirection: 0
+  rotateDirection: 1
   range: 0.02
 --- !u!114 &114044572742674088
 MonoBehaviour:
@@ -1100,5 +1100,5 @@ MonoBehaviour:
   isSelfRotate: 0
   isSelfRotatePositive: 0
   speed: 0
-  rotateDirection: 0
+  rotateDirection: 1
   range: -0.02

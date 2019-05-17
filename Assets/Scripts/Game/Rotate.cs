@@ -68,4 +68,13 @@ public class Rotate : MonoBehaviour {
                 transform.rotation = Quaternion.Euler(speed * t, -speed * t, speed * t);           
         }     
     }
+
+    public void SelfRotate(bool flag)
+    {
+        isSelfRotate = flag;
+    }
+    public void SelfRotatePositive(bool flag)
+    {
+        isSelfRotatePositive = flag;
+    }
 }

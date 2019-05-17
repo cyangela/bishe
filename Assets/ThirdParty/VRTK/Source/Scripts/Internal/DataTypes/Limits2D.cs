@@ -37,5 +37,10 @@
         {
             return new Vector2(minimum, maximum);
         }
+
+        public float Distance()
+        {
+            return (maximum - minimum);
+        }
     }
 }

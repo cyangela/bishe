@@ -9,7 +9,7 @@ public class PrintWord1 : MonoBehaviour
     public string str;
     public float time = 0.05f;
     public int warp;
-    public Button button;
+    public GameObject button;
     private Text text;
     private StringBuilder sb = new StringBuilder();
     private int count = 0;
