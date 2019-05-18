@@ -20,6 +20,9 @@ public class Rotate : MonoBehaviour {
     [Range(1f, 100f)]
     public float speed;
 
+    [Header("静止转向")]
+    public Vector3 vector3;
+
     float t;
     [Header("漂浮方向")]
     public RotateDirection rotateDirection = RotateDirection.Forward;
@@ -72,6 +75,7 @@ public class Rotate : MonoBehaviour {
     public void SelfRotate(bool flag)
     {
         isSelfRotate = flag;
+        transform.rotation = Quaternion.Euler(vector3.x, vector3.y, vector3.z);
     }
     public void SelfRotatePositive(bool flag)
     {

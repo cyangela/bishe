@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: fb00448e953afca48b3ed220a1b3aa1a
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: gao_er_ji_ti01
+    100002: nei_zhi_wang01
+    100004: nei_zhi_wang02
+    100006: rong_mei_ti01
+    100008: xi_bao_bi
+    100010: xi_bao_he01
+    100012: xi_bao_mo01
+    100014: xian_li_ti01
+    100016: xian_li_ti02
+    100018: xian_li_ti03
+    100020: ye_lv_ti01
+    100022: ye_lv_ti02
+    100024: ye_lv_ti03
+    100026: ye_pao
+    100028: //RootNode
+    400000: gao_er_ji_ti01
+    400002: nei_zhi_wang01
+    400004: nei_zhi_wang02
+    400006: rong_mei_ti01
+    400008: xi_bao_bi
+    400010: xi_bao_he01
+    400012: xi_bao_mo01
+    400014: xian_li_ti01
+    400016: xian_li_ti02
+    400018: xian_li_ti03
+    400020: ye_lv_ti01
+    400022: ye_lv_ti02
+    400024: ye_lv_ti03
+    400026: ye_pao
+    400028: //RootNode
+    2100000: _dongwu_xibao02___Default
+    2100002: _dongwu_xibaoMaterial__0
+    2100004: 07 - Default
+    2300000: gao_er_ji_ti01
+    2300002: nei_zhi_wang01
+    2300004: nei_zhi_wang02
+    2300006: rong_mei_ti01
+    2300008: xi_bao_bi
+    2300010: xi_bao_he01
+    2300012: xi_bao_mo01
+    2300014: xian_li_ti01
+    2300016: xian_li_ti02
+    2300018: xian_li_ti03
+    2300020: ye_lv_ti01
+    2300022: ye_lv_ti02
+    2300024: ye_lv_ti03
+    2300026: ye_pao
+    3300000: gao_er_ji_ti01
+    3300002: nei_zhi_wang01
+    3300004: nei_zhi_wang02
+    3300006: rong_mei_ti01
+    3300008: xi_bao_bi
+    3300010: xi_bao_he01
+    3300012: xi_bao_mo01
+    3300014: xian_li_ti01
+    3300016: xian_li_ti02
+    3300018: xian_li_ti03
+    3300020: ye_lv_ti01
+    3300022: ye_lv_ti02
+    3300024: ye_lv_ti03
+    3300026: ye_pao
+    4300000: rong_mei_ti01
+    4300002: gao_er_ji_ti01
+    4300004: xi_bao_he01
+    4300006: xian_li_ti03
+    4300008: xi_bao_mo01
+    4300010: xian_li_ti01
+    4300012: xian_li_ti02
+    4300014: nei_zhi_wang01
+    4300016: nei_zhi_wang02
+    4300018: ye_lv_ti03
+    4300020: xi_bao_bi
+    4300022: ye_pao
+    4300024: ye_lv_ti01
+    4300026: ye_lv_ti02
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 07 - Default
+    second: {fileID: 2100000, guid: e917cd4729bc5264992175b4c295368a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _dongwu_xibao02___Default
+    second: {fileID: 2100000, guid: ef78fdbdc9699024e98a0a2da2932bbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _dongwu_xibaoMaterial__0
+    second: {fileID: 2100000, guid: f4af02d98ad8f244a96684326e2b5dd6, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
