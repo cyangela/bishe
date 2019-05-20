@@ -10,7 +10,7 @@ public class MianGlobal : MonoBehaviour
     public OutLine go_4;
     void Start ()
     {
-        GameManager._Instance.currentScenceID = ScenceID.Cell;
+        //GameManager._Instance.currentScenceID = ScenceID.Cell;
         if (GameManager._Instance.currentScenceID == ScenceID.Cell)
         {
             go_1.SetActive(false);

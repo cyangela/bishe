@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 
 public class Tools
 {
+    public static Font new_Font = Resources.Load<Font>("造字工房悦圆");
+
     [MenuItem("GameObject/显示碰撞体", priority = 49)]
     public static void RemoveColliders()
     {
@@ -69,6 +72,16 @@ public class Tools
         }
     }
 
+    [MenuItem("GameObject/修改字体", priority = 49)]
+    public static void ChangeFonts()
+    {
+        Transform[] transforms = Selection.transforms;
+        for (int i = 0; i < transforms.Length; i++)
+        {
+            ChangeFont(transforms[i]);
+        }
+    }
+
     //[MenuItem("GameObject/修改Tag为ExcludeTeleport", priority = 49)]
     //public static void Tag_ExcludeTeleport()
     //{
@@ -114,6 +127,21 @@ public class Tools
             for (int i = 0; i < transform.childCount; i++)
             {
                 ChangeTag(transform.GetChild(i), str);
+            }
+        }
+    }
+
+    static void ChangeFont(Transform transform)
+    {
+        if (transform.GetComponent<Text>())
+        {
+            transform.GetComponent<Text>().font = new_Font;
+        }
+        if (transform.childCount > 0)
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                ChangeFont(transform.GetChild(i));
             }
         }
     }
