@@ -11,7 +11,7 @@ public class Bow : MonoBehaviour
     public float blendMultiplier = 255f;
     public GameObject realArrowPrefab;
 
-    public float maxShootSpeed = 50;
+    public float maxShootSpeed = 70;
 
     public AudioClip fireSound;
 
@@ -56,7 +56,7 @@ public class Bow : MonoBehaviour
         AudioSource.PlayClipAtPoint(fireSound, transform.position);
         GetComponent<RWVR_InteractionObject>().currentController.Vibrate(3500);
         arrow.GetComponent<RealArrow>().Launch();
-
+        Destroy(arrow, 3);
         Disarm();
     }
 }

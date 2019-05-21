@@ -19,7 +19,10 @@ public class RWVR_UIController : RWVR_InteractionObject
     public Rotate[] rotate;
     [Header("返回按钮")]
     public bool go_Return;
-
+    [Header("分裂返回按钮")]
+    public bool go_Returns;
+    [Header("细胞器分裂")]
+    public bool isCellSplit;
 
     public override void OnTriggerWasPressed(RWVR_InteractionController controller)
     {
@@ -49,6 +52,14 @@ public class RWVR_UIController : RWVR_InteractionObject
         if (go_Return)
         {
             Cell_Manager._Instance.ReturnClick();
+        }
+        if (isCellSplit)
+        {
+            Cell_Manager._Instance.ShowSingleCellQi(GetComponent<CellInformation>());
+        }
+        if (go_Returns)
+        {
+            Cell_Manager._Instance.ReturnClicks();
         }
     }
  }

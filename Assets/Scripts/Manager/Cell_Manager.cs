@@ -45,4 +45,22 @@ public class Cell_Manager : MonoBehaviour
         }
     }
 
+    public void ReturnClicks()
+    {
+        if (cell)
+        {
+            cell.UnlodaOutLine();
+            cell.HideSingleCellQi();
+            cell = null;
+        }
+    }
+
+    public void ShowSingleCellQi(CellInformation cl)
+    {
+        this.cell = cl;
+        cell.ShowOutLine();
+        cell.DisPlayInfo();
+        cell.ShowSingleCellQi();
+    }
+
 }

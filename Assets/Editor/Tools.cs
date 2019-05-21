@@ -81,6 +81,15 @@ public class Tools
             ChangeFont(transforms[i]);
         }
     }
+    [MenuItem("GameObject/修改字体颜色为白色", priority = 49)]
+    public static void ChangeFontsColor()
+    {
+        Transform[] transforms = Selection.transforms;
+        for (int i = 0; i < transforms.Length; i++)
+        {
+            ChangeFontColor(transforms[i]);
+        }
+    }
 
     //[MenuItem("GameObject/修改Tag为ExcludeTeleport", priority = 49)]
     //public static void Tag_ExcludeTeleport()
@@ -142,6 +151,20 @@ public class Tools
             for (int i = 0; i < transform.childCount; i++)
             {
                 ChangeFont(transform.GetChild(i));
+            }
+        }
+    }
+    static void ChangeFontColor(Transform transform)
+    {
+        if (transform.GetComponent<Text>())
+        {
+            transform.GetComponent<Text>().color = Color.white;
+        }
+        if (transform.childCount > 0)
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                ChangeFontColor(transform.GetChild(i));
             }
         }
     }

@@ -10,7 +10,6 @@ public class RealArrow : MonoBehaviour
     private bool launched;
     private bool stuckInWall;
 
-    // Use this for initialization
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -51,9 +50,10 @@ public class RealArrow : MonoBehaviour
             return;
         }
 
-        if (launched && !stuckInWall)
+        if (other.CompareTag("Target") && launched && !stuckInWall)
         {
             GetStuck(other);
+            Test_Manager._Instance.Compare(other.GetComponent<Target>(),other.transform.parent.GetComponent<Animator>());
         }
     }
 }

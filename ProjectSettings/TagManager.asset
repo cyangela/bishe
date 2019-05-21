@@ -18,6 +18,7 @@ TagManager:
   - Video
   - Start_3D_UI
   - Controller
+  - Target
   layers:
   - Default
   - TransparentFX
