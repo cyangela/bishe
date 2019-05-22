@@ -290,6 +290,7 @@ namespace VRTK
         {
             if (SelectionButtonPressed != null)
             {
+                GameManager._Instance.PlayEffect(0);
                 SelectionButtonPressed(this, e);
             }
         }

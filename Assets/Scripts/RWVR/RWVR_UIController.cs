@@ -23,9 +23,16 @@ public class RWVR_UIController : RWVR_InteractionObject
     public bool go_Returns;
     [Header("细胞器分裂")]
     public bool isCellSplit;
+    [Header("进行测试")]
+    public bool isGotoTest;
 
     public override void OnTriggerWasPressed(RWVR_InteractionController controller)
     {
+        if (isGotoTest)
+        {
+            Cell_Manager._Instance.GoToTest();
+        }
+
         for (int i = 0; i < gos_Off.Length; i++)
         {
             gos_Off[i].SetActive(false);

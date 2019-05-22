@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum CellQi
 {
@@ -63,4 +64,8 @@ public class Cell_Manager : MonoBehaviour
         cell.ShowSingleCellQi();
     }
 
+    public void GoToTest()
+    {
+        SceneManager.LoadScene("Test");
+    }
 }

@@ -53,7 +53,7 @@ public class ScaleEvent : _3DUIEventBase
         {
             vector3 = target.localPosition;
             target.Translate(0, 0, -scale);
-            if (target.name != "Video")
+            if (target.name == "Start")
             {
                 GameManager._Instance.isCanTo2019 = true;
             }

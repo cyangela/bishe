@@ -101,6 +101,7 @@ public class RWVR_InteractionController : MonoBehaviour {
                     GameManager._Instance.currentScenceID = ScenceID.Mian;
                     SceneManager.LoadScene("2019");
                 });
+                GameManager._Instance.PlayEffect(1);
                 ScreenFade.Instance.SceneFade(myTween);
             }
         }

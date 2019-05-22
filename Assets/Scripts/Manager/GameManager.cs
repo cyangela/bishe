@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 /// <summary>
 /// 场景ID
@@ -38,6 +39,12 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public ScenceID currentScenceID = 0;//当前场景ID
 
+    public AudioSource bg_Source;
+    public AudioSource effect_Source;
+
+    public AudioClip[] bg_Clips;
+    public AudioClip[] effect_Clips;
+
     /// <summary>
     /// 设置引导路标的可见性
     /// </summary>
@@ -52,5 +59,27 @@ public class GameManager : MonoBehaviour
             telePortPoints[current_Part].SetActive(flag);
             current_Part++;
         }
+    }
+
+    public void PlayBGM(int id)
+    {
+        if (id < bg_Clips.Length)
+        {
+            bg_Source.clip = bg_Clips[id];
+        }
+        else
+        {
+            bg_Source.clip = bg_Clips[0];
+        }
+        bg_Source.Play();
+    }
+
+    public void PlayEffect(int id)
+    {
+        if (id < effect_Clips.Length)
+        {
+            effect_Source.clip = effect_Clips[id];
+            effect_Source.Play();
+        }      
     }
 }

@@ -56,7 +56,10 @@ public class PrintWord1 : MonoBehaviour
         }
         sb.Append("。");
         yield return new WaitForSeconds(1);
-        button.gameObject.SetActive(true);
+        if (button)
+        {
+            button.gameObject.SetActive(true);
+        }
     }
 
 }
