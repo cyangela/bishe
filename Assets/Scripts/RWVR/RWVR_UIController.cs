@@ -28,6 +28,8 @@ public class RWVR_UIController : RWVR_InteractionObject
 
     public override void OnTriggerWasPressed(RWVR_InteractionController controller)
     {
+        GameManager._Instance.PlayEffect(3);
+
         if (isGotoTest)
         {
             Cell_Manager._Instance.GoToTest();

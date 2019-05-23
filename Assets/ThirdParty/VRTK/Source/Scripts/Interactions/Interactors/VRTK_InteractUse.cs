@@ -115,7 +115,7 @@ namespace VRTK
         public virtual void OnUseButtonPressed(ControllerInteractionEventArgs e)
         {
             if (UseButtonPressed != null)
-            {
+            {             
                 UseButtonPressed(this, e);
             }
         }

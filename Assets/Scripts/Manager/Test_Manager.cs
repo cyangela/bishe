@@ -45,12 +45,16 @@ public class Test_Manager : MonoBehaviour {
         result.gameObject.SetActive(true);
         if (cur_Answer.ToString() == target.num)
         {
+            GameManager._Instance.PlayEffect(4);
+            result.color = Color.green;
             result.text = "正确，请继续！";
             animator.SetBool("isPlay", false);
             Invoke("ReSet", 2);
         }
         else
         {
+            GameManager._Instance.PlayEffect(5);
+            result.color = Color.red;
             result.text = "错误，请重选！";
             animator.SetBool("isPlay", false);
             no = true;
@@ -90,5 +94,15 @@ public class Test_Manager : MonoBehaviour {
                 answer[i].GetComponent<Animator>().SetBool("isPlay", false);
             }
         }
+    }
+
+    public void PlayBGM(int id)
+    {
+        GameManager._Instance.PlayBGM(id);
+    }
+
+    public void PlayEffect(int id)
+    {
+        GameManager._Instance.PlayEffect(id);
     }
 }

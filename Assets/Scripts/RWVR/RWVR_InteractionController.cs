@@ -86,6 +86,7 @@ public class RWVR_InteractionController : MonoBehaviour {
                     GameManager._Instance.currentScenceID = ScenceID.Microscope;
                     SceneManager.LoadScene("Microscope");
                 });
+                GameManager._Instance.PlayEffect(1);
                 ScreenFade.Instance.SceneFade(myTween);
             }
         }

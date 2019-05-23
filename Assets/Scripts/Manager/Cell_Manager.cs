@@ -66,6 +66,17 @@ public class Cell_Manager : MonoBehaviour
 
     public void GoToTest()
     {
+        GameManager._Instance.PlayEffect(1);
         SceneManager.LoadScene("Test");
+    }
+
+    public void PlayBGM(int id)
+    {
+        GameManager._Instance.PlayBGM(id);
+    }
+
+    public void PlayEffect(int id)
+    {
+        GameManager._Instance.PlayEffect(id);
     }
 }
