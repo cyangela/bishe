@@ -82,4 +82,11 @@ public class GameManager : MonoBehaviour
             effect_Source.Play();
         }      
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }

@@ -105,4 +105,9 @@ public class Test_Manager : MonoBehaviour {
     {
         GameManager._Instance.PlayEffect(id);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
