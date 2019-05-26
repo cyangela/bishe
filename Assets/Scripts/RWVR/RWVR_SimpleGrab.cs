@@ -39,7 +39,8 @@ public class RWVR_SimpleGrab : RWVR_InteractionObject
             controller.HideControllerModel();
         }
 
-        AddFixedJointToController(controller); 
+        AddFixedJointToController(controller);
+        CancelRotate();
     }
 
     public override void OnTriggerWasReleased(RWVR_InteractionController controller)
@@ -50,10 +51,35 @@ public class RWVR_SimpleGrab : RWVR_InteractionObject
         {
             controller.ShowControllerModel();
         }
+        if (name == "dongwu (1)" || name == "zhiwu (1)")
+        {
+            RemoveFixedJointFromController(controller);
+            ActivateRotate();
+        }
+        else
+        {
+            rb.velocity = controller.velocity;
+            rb.angularVelocity = controller.angularVelocity;
 
-        rb.velocity = controller.velocity;
-        rb.angularVelocity = controller.angularVelocity;
+            RemoveFixedJointFromController(controller);
+        }
 
-        RemoveFixedJointFromController(controller);
+    }
+
+    private void CancelRotate()
+    {
+        if (GetComponent<Rotate>())
+        {
+            GetComponent<Rotate>().enabled = false;
+        }
+    }
+
+    private void ActivateRotate()
+    {
+        if (GetComponent<Rotate>())
+        {
+            transform.position = GetComponent<Rotate>().myPos;
+            GetComponent<Rotate>().enabled = true;
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public enum CellQi
@@ -21,6 +22,10 @@ public enum CellQi
 public class Cell_Manager : MonoBehaviour
 {
     public static Cell_Manager _Instance;
+
+    public PlayableDirector playableDirector;
+
+    public PlayableDirector he;
     private void Awake()
     {
         _Instance = this;
@@ -78,5 +83,19 @@ public class Cell_Manager : MonoBehaviour
     public void PlayEffect(int id)
     {
         GameManager._Instance.PlayEffect(id);
+    }
+
+    public void Play()
+    {
+        playableDirector.Play();
+    }
+    public void Pause()
+    {
+        playableDirector.Pause();
+    }
+
+    public void HePlay()
+    {
+        he.Play();
     }
 }

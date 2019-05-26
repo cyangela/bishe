@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: dfd502f2f55762245a8403ff72c4d24d
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Line003
+    100002: ran005
+    100004: ran006
+    100006: ran007
+    100008: ran008
+    100010: ran009
+    100012: ran01
+    100014: ran010
+    100016: ran011
+    100018: ran012
+    100020: ran013
+    100022: ran014
+    100024: ran015
+    100026: ran016
+    100028: ran02
+    100030: ran03
+    100032: ran04
+    100034: //RootNode
+    100036: xi_bao_mo
+    100038: zhuo_si_dian
+    100040: zhuo_si_dian001
+    100042: zhuo_si_dian002
+    100044: zhuo_si_dian003
+    100046: zhuo_si_dian004
+    100048: zhuo_si_dian005
+    100050: zhuo_si_dian006
+    100052: zhuo_si_dian007
+    400000: Line003
+    400002: ran005
+    400004: ran006
+    400006: ran007
+    400008: ran008
+    400010: ran009
+    400012: ran01
+    400014: ran010
+    400016: ran011
+    400018: ran012
+    400020: ran013
+    400022: ran014
+    400024: ran015
+    400026: ran016
+    400028: ran02
+    400030: ran03
+    400032: ran04
+    400034: //RootNode
+    400036: xi_bao_mo
+    400038: zhuo_si_dian
+    400040: zhuo_si_dian001
+    400042: zhuo_si_dian002
+    400044: zhuo_si_dian003
+    400046: zhuo_si_dian004
+    400048: zhuo_si_dian005
+    400050: zhuo_si_dian006
+    400052: zhuo_si_dian007
+    2100000: ran_di_default
+    2100002: No Name
+    2300000: Line003
+    2300002: ran005
+    2300004: ran006
+    2300006: ran007
+    2300008: ran008
+    2300010: ran009
+    2300012: ran01
+    2300014: ran010
+    2300016: ran011
+    2300018: ran012
+    2300020: ran013
+    2300022: ran014
+    2300024: ran015
+    2300026: ran016
+    2300028: ran02
+    2300030: ran03
+    2300032: ran04
+    2300034: xi_bao_mo
+    2300036: zhuo_si_dian
+    2300038: zhuo_si_dian001
+    2300040: zhuo_si_dian002
+    2300042: zhuo_si_dian003
+    2300044: zhuo_si_dian004
+    2300046: zhuo_si_dian005
+    2300048: zhuo_si_dian006
+    2300050: zhuo_si_dian007
+    3300000: Line003
+    3300002: ran005
+    3300004: ran006
+    3300006: ran007
+    3300008: ran008
+    3300010: ran009
+    3300012: ran01
+    3300014: ran010
+    3300016: ran011
+    3300018: ran012
+    3300020: ran013
+    3300022: ran014
+    3300024: ran015
+    3300026: ran016
+    3300028: ran02
+    3300030: ran03
+    3300032: ran04
+    3300034: xi_bao_mo
+    3300036: zhuo_si_dian
+    3300038: zhuo_si_dian001
+    3300040: zhuo_si_dian002
+    3300042: zhuo_si_dian003
+    3300044: zhuo_si_dian004
+    3300046: zhuo_si_dian005
+    3300048: zhuo_si_dian006
+    3300050: zhuo_si_dian007
+    4300000: zhuo_si_dian
+    4300002: xi_bao_mo
+    4300004: ran01
+    4300006: ran02
+    4300008: ran03
+    4300010: ran04
+    4300012: zhuo_si_dian001
+    4300014: ran005
+    4300016: ran006
+    4300018: ran007
+    4300020: ran008
+    4300022: zhuo_si_dian002
+    4300024: zhuo_si_dian003
+    4300026: ran009
+    4300028: ran010
+    4300030: ran011
+    4300032: ran012
+    4300034: zhuo_si_dian004
+    4300036: zhuo_si_dian005
+    4300038: ran013
+    4300040: ran014
+    4300042: ran015
+    4300044: ran016
+    4300046: zhuo_si_dian006
+    4300048: zhuo_si_dian007
+    4300050: Line003
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

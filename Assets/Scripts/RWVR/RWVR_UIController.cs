@@ -25,6 +25,10 @@ public class RWVR_UIController : RWVR_InteractionObject
     public bool isCellSplit;
     [Header("进行测试")]
     public bool isGotoTest;
+    [Header("有丝分裂")]
+    public bool isFenlie;
+    [Header("细胞核变大")]
+    public bool isHe;
 
     public override void OnTriggerWasPressed(RWVR_InteractionController controller)
     {
@@ -69,6 +73,16 @@ public class RWVR_UIController : RWVR_InteractionObject
         if (go_Returns)
         {
             Cell_Manager._Instance.ReturnClicks();
+        }
+        if (isFenlie)
+        {
+            Cell_Manager._Instance.Play();
+        }
+        if (isHe)
+        {
+            Cell_Manager._Instance.HePlay();
+            isHe = false;
+            isFenlie = true;
         }
     }
  }

@@ -10,6 +10,9 @@ public enum RotateDirection
 }
 
 public class Rotate : MonoBehaviour {
+    [HideInInspector]
+    public Vector3 myPos;
+
     [Header("自转")]
     public bool isSelfRotate;
 
@@ -34,6 +37,7 @@ public class Rotate : MonoBehaviour {
     float hight;
     void Start ()
     {
+        myPos = transform.position;
         if (rotateDirection == RotateDirection.Forward)
         {
             hight = transform.localPosition.z;
