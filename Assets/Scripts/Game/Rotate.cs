@@ -13,6 +13,9 @@ public class Rotate : MonoBehaviour {
     [HideInInspector]
     public Vector3 myPos;
 
+    [HideInInspector]
+    public Quaternion myRot;
+
     [Header("自转")]
     public bool isSelfRotate;
 
@@ -38,6 +41,7 @@ public class Rotate : MonoBehaviour {
     void Start ()
     {
         myPos = transform.position;
+        myRot = transform.rotation;
         if (rotateDirection == RotateDirection.Forward)
         {
             hight = transform.localPosition.z;
@@ -79,6 +83,7 @@ public class Rotate : MonoBehaviour {
     public void SelfRotate(bool flag)
     {
         isSelfRotate = flag;
+        range = 0;
         transform.rotation = Quaternion.Euler(vector3.x, vector3.y, vector3.z);
     }
     public void SelfRotatePositive(bool flag)

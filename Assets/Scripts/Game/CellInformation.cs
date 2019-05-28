@@ -21,6 +21,7 @@ public class CellInformation : MonoBehaviour
         for (int i = 0; i < gos.Length; i++)
         {
             ToggleHighlight(gos[i].transform, hoverColor, true);
+            Enable(gos[i].transform, true);
         }
     }
 
@@ -29,6 +30,7 @@ public class CellInformation : MonoBehaviour
         for (int i = 0; i < gos.Length; i++)
         {
             ToggleHighlight(gos[i].transform, Color.clear, true);
+            Enable(gos[i].transform, false);
         }
     }
 
@@ -56,6 +58,11 @@ public class CellInformation : MonoBehaviour
             }
         }
     }
+
+    private void Enable(Transform target, bool flag)
+    {
+        target.GetComponent<RWVR_Cell>().enable = flag;
+}
 
     public void ShowSingleCellQi()
     {
